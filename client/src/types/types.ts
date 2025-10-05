@@ -2,6 +2,8 @@ export type PieceType = "pawn" | "rook" | "bishop" | "knight" | "queen" | "king"
 
 export type PieceColor = "black" | "white" 
 
+export type PromotionPiece = "queen" | "knight" | "bishop" | "rook"
+
 export interface Piece {
     type: PieceType;
     color: PieceColor;
@@ -17,7 +19,8 @@ export interface Square {
   isDark: boolean;
 }
 
-export interface Coord {
-  col: number,
-  row: number
+export interface Threats {
+  attacker?: Square,
+  path?: Square[],
+  type?: "direct" | "linear"
 }

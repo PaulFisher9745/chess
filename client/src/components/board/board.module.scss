@@ -1,5 +1,6 @@
 .board {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
   width: 800px;
@@ -33,7 +34,7 @@
     background-color: #f0d9b5;
   }
   &.select {
-    background-color: #77b863;
+    background-color: #548345;
   }
 }
 .numbering {
@@ -76,4 +77,37 @@
     left: 91px;
   }
 
+}
+
+.highlight {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    background:  #548345;
+    border-radius: 50%;
+    z-index: 100;
+  }
+
+  &:hover {
+    background-color: #6fb956ab;
+  }
+  
+}
+
+.highlightEnemy {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(transparent 0%, transparent 79%, #548345 80%);
+    z-index: 100;
+  }
+
+  &:hover {
+    background-color: #6fb956ab;
+  }
+  
 }

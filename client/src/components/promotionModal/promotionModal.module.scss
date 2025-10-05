@@ -1,0 +1,50 @@
+.overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: auto;
+
+    &.reverse{ 
+        transform: rotate(180deg);
+    }
+
+    &.darkside {
+        top: 0;  
+    }
+
+    &.whiteside {
+        bottom: 0;  
+    }
+
+}
+
+.modal {
+    background: white;
+    padding: 3px;
+    border-radius: 15px;
+}
+
+.pieces {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pieceOption {
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s;
+    
+    &:hover {
+        border-color: #0070f3;
+        transform: scale(1.1);
+    }
+    
+    img {
+        display: block;
+    }
+}
